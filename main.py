@@ -1,4 +1,5 @@
 import pygame
+import numpy as np
 
 pygame.mixer.pre_init(44100, 16, 2, 4096)
 pygame.init()
@@ -23,10 +24,10 @@ DBROWN = (159, 100,  64)
 
 # display window that is drawn to
 WIN = pygame.display.set_mode((WIDTH, HEIGHT))
-pygame.display.set_caption("Time platformer")
+pygame.display.set_caption("3D")
 
 # fonts
-FONT = lambda x: pygame.font.SysFont("consolas.ttf", x)
+FONT = lambda x: pygame.font.SysFont("consolas", x)
 TITLEFONT = FONT(70)
 
 # file locations
@@ -79,10 +80,7 @@ def main():
         import sys
         sys.exit()
         
-      elif event.type == pygame.KEYDOWN:
-        if state.get_state() == "start":
-          if event.key == pygame.K_e: # temp
-            state.set_state("editor mode")
+
     
     draw()
 
