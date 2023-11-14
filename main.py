@@ -1,5 +1,6 @@
 import pygame
 import numpy as np
+from components.renderer import draw
 
 pygame.mixer.pre_init(44100, 16, 2, 4096)
 pygame.init()
@@ -36,6 +37,7 @@ PATH_TO_ATLAS_IMAGE = path.join("assets", "images", "atlas.bmp")
 PATH_TO_LEVELS = path.join("assets", "levels", "levels")
 
 def draw():
+  
   pygame.display.update()
 
 def main():
